@@ -1,0 +1,352 @@
+.education-container {
+    min-height: 100vh;
+    background: var(--ocean-background);
+    background: linear-gradient(135deg, var(--ocean-background) 0%, rgba(52, 211, 153, 0.08) 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    flex: 1;
+  }
+
+.education-page {
+    max-width: 67%;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .page-subtitle {
+    color: var(--color-text-primary);
+    margin: 0;
+  }
+
+  .section-heading {
+    color: var(--color-text-primary);
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+  }
+
+  .section-heading::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: var(--ocean-gradient);
+    border-radius: 2px;
+  }
+
+
+  .education-section {
+    margin-bottom: 4rem;
+  }
+
+  .education-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .education-card {
+    background: var(--card-bg-light);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: var(--ocean-shadow-md);
+    border: 2px solid transparent;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .education-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--ocean-gradient);
+  }
+
+  .education-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--ocean-shadow-lg);
+    border-color: var(--ocean-primary);
+  }
+
+  .education-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+  }
+
+  .degree-title {
+    color: var(--color-text-primary);
+    margin: 0;
+    flex: 1;
+  }
+
+  .graduation-year {
+    color: var(--ocean-primary);
+    background: var(--ocean-gradient-subtle);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    margin-left: 1rem;
+  }
+
+  .university-info {
+    margin-bottom: 1.5rem;
+  }
+
+  .education-details {
+    display: grid;
+    grid-template-columns: 0.5fr 1.1fr 0.9fr;
+    gap: 15%;
+    margin-bottom: 1.5rem;
+  }
+
+  .detail-row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+  .courses-section, .achievements-section {
+    margin-bottom: 1.5rem;
+  }
+
+  .courses-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .course-tag {
+    background: var(--ocean-gradient-subtle);
+    color: var(--color-text-primary);
+    padding: 0.4rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+  }
+
+  .achievements-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .achievement-item {
+    padding: 0.5rem 0;
+    color: var(--color-text-primary);
+    position: relative;
+    padding-left: 1.5rem;
+  }
+
+  .achievement-item::before {
+    content: '🏆';
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+  }
+
+  .certifications-section {
+    margin-bottom: 4rem;
+  }
+
+  .certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+  }
+
+  .certification-card {
+    background: var(--ocean-light);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: var(--ocean-shadow-md);
+    transition: all 0.3s ease;
+    border-left: 5px solid var(--ocean-primary);
+  }
+
+  .certification-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--ocean-shadow-lg);
+  }
+
+  .cert-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .cert-name {
+    color: var(--color-text-primary);
+    margin: 0;
+  }
+
+  .cert-score {
+    color: var(--ocean-primary);
+    background: var(--ocean-gradient-subtle);
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+  }
+
+  .cert-dates {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .cert-date, .cert-valid {
+    color: var(--color-text-secondary);
+  }
+
+  .score-breakdown h6 {
+    color: var(--color-text-primary);
+    margin: 0 0 1rem 0;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .breakdown-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+
+  .breakdown-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    background: var(--card-bg-medium);
+    border-radius: 8px;
+    border: 1px solid var(--ocean-medium);
+  }
+
+  .skill-name {
+    color: var(--color-text-secondary);
+    font-weight: 500;
+  }
+
+  .skill-score {
+    color: var(--ocean-primary);
+    font-weight: 600;
+  }
+
+  .tech-certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .tech-cert-card {
+    background: var(--ocean-light);
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: var(--ocean-shadow-sm);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+  }
+
+  .tech-cert-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--ocean-shadow-md);
+    border-color: var(--ocean-accent);
+  }
+
+  .tech-cert-name {
+    color: var(--color-text-primary);
+    margin: 0 0 0.5rem 0;
+  }
+
+  .tech-cert-issuer {
+    color: var(--ocean-primary);
+    font-weight: 500;
+    margin: 0 0 1rem 0;
+  }
+
+  .tech-cert-details {
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+  }
+
+  .tech-cert-date, .tech-cert-valid, .tech-cert-id {
+    margin-bottom: 0.3rem;
+  }
+
+  .tech-cert-id {
+    font-family: monospace;
+    font-size: 0.8rem;
+    color: var(--color-text-tertiary);
+  }
+
+  .credential-link {
+    color: var(--ocean-primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  .credential-link:hover {
+    color: var(--ocean-secondary);
+    text-decoration: underline;
+  }
+
+  @media (max-width: 1620px) {
+
+    .education-details {
+      display: flex;
+      flex-direction: column;
+      
+    }
+  }
+  @media (max-width: 768px) {
+    .education-page {
+      padding: 1rem;
+    }
+
+    .page-title {
+      font-size: 2rem;
+    }
+
+    .education-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .graduation-year {
+      margin-left: 0;
+      margin-top: 0.5rem;
+    }
+
+
+    .certifications-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .breakdown-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .cert-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .cert-score {
+      margin-top: 0.5rem;
+    }
+
+    .cert-dates {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }

@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+html, body, #root {
+  min-height: 100%;  
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+
+#root {
+  display: flex;
+  flex-direction: column; 
+  min-height: 100vh;      
+  width: 100%;
+  background-color: var(--ocean-background);
+}
+
+:root {
+  --ocean-primary: #38BDF8;
+  --ocean-secondary: #34D399;
+  --ocean-accent: #60A5FA;
+  --ocean-coral: #F87171;
+  --ocean-lavender: #A78BFA;
+  --ocean-cream: #FBBF24;
+  --ocean-background: #0F172A;
+  
+  --ocean-gradient: linear-gradient(135deg, #38BDF8 0%, #34D399 100%);
+  --ocean-gradient-subtle: linear-gradient(135deg, rgba(56, 189, 248, 0.12) 0%, rgba(52, 211, 153, 0.12) 100%);
+  
+  --ocean-white: #F0F5FA;
+  --ocean-light: #1A2332;
+  --ocean-medium: #4A5F7F;
+  --ocean-dark: #10F5FA;
+  --ocean-navy: #0F172A;
+  
+  --ocean-shadow-sm: 0 2px 4px rgba(56, 189, 248, 0.25);
+  --ocean-shadow-md: 0 4px 12px rgba(56, 189, 248, 0.3);
+  --ocean-shadow-lg: 0 8px 25px rgba(56, 189, 248, 0.35);
+  
+  --color-text-primary: #F0F5FA;
+  --color-text-secondary: #D4DCE6;
+  --color-text-tertiary: #B5C4D4;
+  --ocean-background: #0F172A;
+  --color-bg-elevated: #334155;
+  --color-border: #475569;
+  --color-border-secondary: #1E293B;
+  
+  --card-bg-light: #1E293B;
+  --card-bg-medium: #1A2332;
+  --card-border-color: rgba(56, 189, 248, 0.3);
+  
+  --gradient-card-end: #2d5a72;
+  --gradient-card-hover-start: #2a4a5c;
+  --gradient-card-hover-end: #3d6a82;
+  
+  --gradient-category-start: rgba(26, 35, 50, 0.5);
+  --gradient-category-end: rgba(51, 65, 85, 0.3);
+}
+
+@keyframes pageSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pageGlow {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(56, 189, 248, 0.6);
+  }
+}
+
+.page-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 5.6rem;
+  font-weight: 700;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background: var(--ocean-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: pageSlideIn 0.8s ease-out forwards, pageGlow 3s ease-in-out infinite;
+  text-align: center;
+  color: transparent;
+}
+
+.text-heading {
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.text-heading::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: var(--ocean-gradient);
+  border-radius: 2px;
+}
+
+.text-heading-2 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.text-subheading {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.text-label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0 0 1rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.text-primary {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  line-height: 1.6;
+}
+
+.text-secondary {
+  font-size: 1.05rem;
+  color: var(--color-text-secondary);
+  font-style: italic;
+}
+
+.text-tertiary {
+  font-size: 1rem;
+  color: var(--color-text-tertiary);
+  font-style: italic;
+}
+
+.text-accent {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--ocean-primary);
+}
+
+.text-accent-secondary {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--ocean-secondary);
+}
+
+.text-badge {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--ocean-primary);
+  background: var(--ocean-gradient-subtle);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+.text-small {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+}
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 3.5rem;
+  }
+
+  .text-heading {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .text-heading-2 {
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .text-subheading {
+    font-size: 1.15rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .text-label {
+    font-size: 1rem;
+    margin: 0 0 0.8rem 0;
+  }
+
+  .text-primary {
+    font-size: 1rem;
+  }
+
+  .text-secondary {
+    font-size: 0.95rem;
+  }
+
+  .text-tertiary {
+    font-size: 0.9rem;
+  }
+
+  .text-accent {
+    font-size: 1.1rem;
+  }
+
+  .text-accent-secondary {
+    font-size: 1rem;
+  }
+
+  .text-badge {
+    font-size: 0.95rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .text-small {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 2.5rem;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .text-heading {
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .text-heading-2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .text-subheading {
+    font-size: 1rem;
+    margin-bottom: 0.15rem;
+  }
+
+  .text-label {
+    font-size: 0.9rem;
+    margin: 0 0 0.6rem 0;
+    letter-spacing: 0.3px;
+  }
+
+  .text-primary {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .text-secondary {
+    font-size: 0.9rem;
+  }
+
+  .text-tertiary {
+    font-size: 0.85rem;
+  }
+
+  .text-accent {
+    font-size: 1rem;
+  }
+
+  .text-accent-secondary {
+    font-size: 0.95rem;
+  }
+
+  .text-badge {
+    font-size: 0.9rem;
+    padding: 0.35rem 0.7rem;
+  }
+
+  .text-small {
+    font-size: 0.8rem;
+  }
+}

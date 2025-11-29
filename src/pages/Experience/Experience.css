@@ -1,0 +1,249 @@
+.experience-container {
+  min-height: 100vh;
+  background: var(--ocean-background);
+  background: linear-gradient(135deg, var(--ocean-background) 0%, rgba(52, 211, 153, 0.08) 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  flex: 1;
+}
+
+.experience-page {
+  max-width: 67%;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.page-subtitle {
+  font-size: 1.2rem;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.section-heading {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.section-heading::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: var(--ocean-gradient);
+  border-radius: 2px;
+}
+
+.experience-section {
+  margin-bottom: 4rem;
+}
+
+.experience-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.experience-card {
+  background: var(--card-bg-light);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: var(--ocean-shadow-md);
+  border: 2px solid transparent;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.experience-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--ocean-gradient);
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--ocean-shadow-lg);
+  border-color: var(--ocean-primary);
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.position-info {
+  flex: 1;
+}
+
+.experience-description {
+  color: var(--color-text-primary);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.responsibilities-section,
+.technologies-section,
+.achievements-section {
+  margin-bottom: 1.5rem;
+}
+
+.responsibilities-list,
+.achievements-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.achievement-item {
+  padding: 0.5rem 0;
+  color: var(--color-text-primary);
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.achievement-item::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  color: var(--ocean-primary);
+  font-weight: bold;
+}
+
+.technologies-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-tag {
+  background: var(--ocean-gradient-subtle);
+  color: var(--color-text-primary);
+  padding: 0.4rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+  transform: translateY(-2px);
+  border-color: var(--ocean-primary);
+  box-shadow: 0 2px 8px rgba(56, 189, 248, 0.2);
+}
+
+@media (max-width: 1024px) {
+  .experience-page {
+    max-width: 85%;
+  }
+
+  .page-title {
+    font-size: 2.5rem;
+  }
+
+  .position-title {
+    font-size: 1.3rem;
+  }
+
+  .company-name {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-page {
+    max-width: 95%;
+    padding: 1rem;
+  }
+
+  .page-header {
+    margin-bottom: 2rem;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .page-subtitle {
+    font-size: 1rem;
+  }
+
+  .experience-card {
+    padding: 1.5rem;
+  }
+
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .duration-badge {
+    margin-top: 0.5rem;
+  }
+
+  .section-title {
+    font-size: 0.9rem;
+  }
+
+  .position-title {
+    font-size: 1.2rem;
+  }
+
+  .company-name {
+    font-size: 0.95rem;
+  }
+
+  .technologies-grid {
+    gap: 0.4rem;
+  }
+
+  .tech-tag {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-page {
+    padding: 0.5rem;
+  }
+
+  .page-title {
+    font-size: 1.5rem;
+  }
+
+  .page-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .experience-card {
+    padding: 1rem;
+  }
+
+  .position-title {
+    font-size: 1rem;
+  }
+
+  .company-name {
+    font-size: 0.9rem;
+  }
+
+  .experience-description {
+    font-size: 0.95rem;
+  }
+}

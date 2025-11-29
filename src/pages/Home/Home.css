@@ -1,0 +1,249 @@
+.home-container {
+  min-height: 100vh;
+  background: var(--ocean-background);
+  background: linear-gradient(135deg, var(--ocean-background) 0%, rgba(52, 211, 153, 0.08) 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.home-main-card {
+  width: 100%;
+  max-width: 1000px;
+  background: var(--card-bg-light) ;
+  border: 2px solid var(--card-border-color) ;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(56, 189, 248, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.gradient-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, #38BDF8, #34D399, #60A5FA, #38BDF8);
+  background-size: 200% 100%;
+  animation: gradientFlow 4s ease infinite;
+}
+
+@keyframes gradientFlow {
+  0%, 100% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+}
+
+.home-content {
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.hero-section {
+  margin-bottom: 50px;
+  animation: fadeInUp 0.8s ease;
+}
+
+
+.hero-title {
+  font-size: 7.9rem ;
+  font-weight: 800;
+  margin: 0 0 20px 0 ;
+  color: red;
+  background-clip: text;
+  letter-spacing: -1px;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+}
+
+
+.wave-letter {
+  display: inline-block;
+  animation: wave 0.6s ease-in-out;
+  animation-fill-mode: backwards;
+  transform-origin: bottom;
+}
+
+
+@keyframes wave {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) rotateX(90deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotateX(0deg);
+  }
+}
+
+.hero-subtitle {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--color-text-secondary) ;
+  line-height: 1.6;
+  margin-bottom: 0 ;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav-section {
+  margin-top: 40px;
+  animation: fadeInUp 0.8s ease;
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.nav-buttons a {
+  text-decoration: none;
+}
+
+.nav-buttons .ant-btn {
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  min-width: 140px;
+}
+
+.nav-buttons .ant-btn-primary {
+  background: linear-gradient(135deg, #38BDF8 0%, #34D399 100%);
+  border-color: #38BDF8;
+}
+
+.nav-buttons .ant-btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(56, 189, 248, 0.4);
+}
+
+.nav-buttons .ant-btn:not(.ant-btn-primary) {
+  background: transparent;
+  color: var(--color-text-primary);
+  border-color: var(--color-border);
+}
+
+.nav-buttons .ant-btn:not(.ant-btn-primary):hover {
+  border-color: var(--ocean-primary);
+  color: var(--ocean-primary);
+  transform: translateY(-3px);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-in {
+  animation: fadeInUp 0.8s ease;
+  animation-fill-mode: backwards;
+}
+
+@media (max-width: 1024px) {
+  .home-content {
+    padding: 70px 30px;
+  }
+
+  .hero-title {
+    font-size: 6rem ;
+    margin-bottom: 3px ;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    padding: 1rem;
+  }
+
+  .home-content {
+    padding: 50px 20px;
+  }
+
+  .hero-title {
+    font-size: 4.7rem ;
+    letter-spacing: -0.5px;
+    margin-bottom: 0px ;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .nav-section {
+    margin-top: 30px;
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .nav-buttons .ant-btn {
+    width: 100%;
+    min-width: unset;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-container {
+    padding: 0.5rem;
+  }
+
+  .home-content {
+    padding: 40px 16px;
+  }
+
+  .home-main-card {
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(56, 189, 248, 0.1);
+  }
+
+  .hero-section {
+    margin-bottom: 30px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+    letter-spacing: -0.5px;
+    margin-bottom: 12px ;
+  }
+
+  .wave-letter {
+    animation-duration: 0.5s;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    max-width: 90%;
+  }
+
+  .nav-section {
+    margin-top: 20px;
+  }
+
+  .nav-buttons {
+    gap: 10px;
+  }
+
+  .nav-buttons .ant-btn {
+    padding: 8px 16px ;
+    font-size: 0.9rem;
+    border-radius: 10px;
+    min-height: 40px;
+  }
+} 
