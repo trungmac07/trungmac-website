@@ -1,6 +1,5 @@
-import React from 'react';
 import { Card, Typography, Button, Space } from 'antd';
-import { ArrowRightOutlined, CodeOutlined, FileTextOutlined, RobotOutlined } from '@ant-design/icons';
+import { ArrowRightOutlined, CodeOutlined, FileTextOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 import "./Home.css"
 

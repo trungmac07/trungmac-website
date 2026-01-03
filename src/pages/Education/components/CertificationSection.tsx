@@ -1,12 +1,5 @@
-import React from 'react';
-import type { Certification, TechnicalCertification } from '../../../types/types';
+import type { CertificationSectionProps } from '../../../types/types';
 import { CertificationCard } from './CertificationCard';
-
-interface CertificationSectionProps {
-  title: string;
-  certifications: (Certification | TechnicalCertification)[];
-  gridClass?: string;
-}
 
 export const CertificationSection = ({
   title,
@@ -18,13 +11,13 @@ export const CertificationSection = ({
   }
 
   return (
-    <section className="certifications-section">
+    <>
       <h2 className="text-heading">{title}</h2>
       <div className={gridClass}>
         {certifications.map((cert, index) => (
           <CertificationCard key={index} cert={cert} />
         ))}
       </div>
-    </section>
+    </>
   );
 };

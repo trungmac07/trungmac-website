@@ -261,17 +261,17 @@ html, body, #root {
   }
 
   .text-heading-2 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-bottom: 1rem;
   }
 
   .text-subheading {
-    font-size: 1rem;
+    font-size: 0.9rem;
     margin-bottom: 0.15rem;
   }
 
   .text-label {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     margin: 0 0 0.6rem 0;
     letter-spacing: 0.3px;
   }

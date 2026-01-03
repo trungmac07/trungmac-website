@@ -25,6 +25,7 @@ export const educationData: Education[] = [
 
 export const certifications: Certification[] = [
   {
+    certType: 'language',
     name: "TOEIC",
     score: "935/990",
     date: "September 2024",
@@ -35,6 +36,7 @@ export const certifications: Certification[] = [
     }
   },
   {
+    certType: 'language',
     name: "TOEIC SW",
     score: "340/400",
     date: "July 2025",
@@ -48,6 +50,7 @@ export const certifications: Certification[] = [
 
 export const additionalCertifications: TechnicalCertification[] = [
   {
+    certType: 'technical',
     name: "AWS Certified Solutions Architect",
     issuer: "Amazon Web Services",
     date: "June 2023",
@@ -55,12 +58,4 @@ export const additionalCertifications: TechnicalCertification[] = [
     credentialId: "AWS-123456789",
     credentialUrl: "https://www.credly.com/badges/aws"
   },
-  {
-    name: "Docker Certified Associate",
-    issuer: "Docker",
-    date: "March 2024",
-    validUntil: "March 2027",
-    credentialId: "DCA-987654321",
-    credentialUrl: "https://www.credly.com/badges/docker"
-  }
 ];

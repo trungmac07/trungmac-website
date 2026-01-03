@@ -23,7 +23,8 @@ export interface Education {
   achievements: React.ReactNode[];
 }
 
-export interface Certification {
+export interface LanguageCertification {
+  certType: 'language';
   name: string;
   score: string;
   date: string;
@@ -32,17 +33,25 @@ export interface Certification {
 }
 
 export interface TechnicalCertification {
+  certType: 'technical';
   name: string;
   issuer: string;
   date: string;
   validUntil: string;
   credentialId: string;
+  credentialUrl?: string;
 }
+
+export type Certification = LanguageCertification | TechnicalCertification;
+
+export type CertificationType = Certification['type'];
+
+
 
 export interface Skill {
   name: string;
   icon: any;
-  link: string[];
+  link: string;
 }
 
 export interface SkillCategory {
@@ -69,8 +78,10 @@ export interface CertificationCardProps {
   cert: Certification;
 }
 
-export interface TechCertificationCardProps {
-  cert: TechnicalCertification;
+export interface CertificationSectionProps {
+  title: string;
+  certifications: Certification[];
+  gridClass?: string;
 }
 
 export interface SkillGridProps {
@@ -88,4 +99,5 @@ export interface StatItem {
   value: string;
   icon: React.ReactNode;
   details: React.ReactNode | string;
+  detailsKey: string;
 }

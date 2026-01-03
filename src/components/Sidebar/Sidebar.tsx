@@ -1,26 +1,27 @@
 import React, { useEffect, useRef, useState } from 'react';
 import {
-  FileOutlined,
   UserOutlined,
   HomeOutlined,
   ReadOutlined,
-  ProductOutlined,
   RocketOutlined,
   RightCircleOutlined,
   LeftCircleOutlined,
   StarOutlined
 } from '@ant-design/icons';
-import type { MenuProps } from 'antd';
-import { Breadcrumb, Layout, Menu, theme, Button, Avatar, Typography, Space } from 'antd';
+
+import { Menu, Button } from 'antd';
 import './Sidebar.css'
 
 import { useNavigate, useLocation } from 'react-router-dom';
-import { myInfo } from '../../constants/info';
+import Sider from 'antd/es/layout/Sider';
 
-const { Header, Content, Footer, Sider } = Layout;
-const { Text } = Typography;
-
-type MenuItem = Required<MenuProps>['items'][number];
+type MenuItem = {
+  key: React.Key;
+  label: React.ReactNode;
+  icon?: React.ReactNode;
+  path?: string;
+  children?: MenuItem[];
+};
 
 function getItem(
   label: React.ReactNode,
@@ -28,16 +29,16 @@ function getItem(
   icon?: React.ReactNode,
   children?: MenuItem[],
   path?: string
-): MenuItem & { path?: string }
-{
+): MenuItem {
   return {
     key,
+    label,
     icon,
     children,
-    label,
     path,
-  } as MenuItem & { path?: string };
+  };
 }
+
 
 
 const items: (MenuItem & { path?: string })[] = [

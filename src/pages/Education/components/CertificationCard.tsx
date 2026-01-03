@@ -1,8 +1,16 @@
-import React from 'react';
-import type { CertificationCardProps } from '../../../types/types';
+import type { Certification, CertificationCardProps, TechnicalCertification } from '../../../types/types';
+
+
+const isTechnicalCertification = (cert: Certification): cert is TechnicalCertification => {
+  return cert.certType === 'technical';
+};
+
+// const isLanguageCertification = (cert: Certification): cert is LanguageCertification => {
+//   return cert.certType === 'language';
+// };
 
 export const CertificationCard = ({ cert }: CertificationCardProps) => {
-  if ('issuer' in cert) {
+  if (isTechnicalCertification(cert)) {
     return (
       <div className="tech-cert-card">
         <h4 className="text-subheading">{cert.name}</h4>
@@ -41,7 +49,7 @@ export const CertificationCard = ({ cert }: CertificationCardProps) => {
             <h6 className="text-label">Score Breakdown</h6>
             <div className="breakdown-grid">
               {Object.entries(cert.breakdown).map(([skill, score]) => (
-                <div key={skill} className="breakdown-item">
+                <div key={`${skill}-${score}`} className="breakdown-item">
                   <span className="text-accent">{skill}:</span>
                   <span className="text-accent">{score}</span>
                 </div>

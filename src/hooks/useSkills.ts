@@ -11,7 +11,7 @@ interface SkillCategory {
 
 export const useSkills = (): SkillCategory[] => {
   return useMemo(() => {
-    return Object.entries(SKILL_CATEGORIES).map(([key, categoryTitle]) => ({
+    return Object.entries(SKILL_CATEGORIES).map(([, categoryTitle]) => ({
       title: categoryTitle,
       skills: SKILLS_DATA[categoryTitle].map(skill => ({
         ...skill,

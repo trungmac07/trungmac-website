@@ -1,4 +1,4 @@
-import type { Education, Certification, TechnicalCertification } from '../types/types';
+import type { Education, Certification } from '../types/types';
 
 export const EDUCATION_DATA: Education[] = [
   {
@@ -27,6 +27,7 @@ export const EDUCATION_DATA: Education[] = [
 
 export const CERTIFICATIONS_DATA: Certification[] = [
   {
+    certType: 'language',
     name: "TOEIC",
     score: "935/990",
     date: "September 2024",
@@ -37,6 +38,7 @@ export const CERTIFICATIONS_DATA: Certification[] = [
     }
   },
   {
+    certType: 'language',
     name: "TOEIC SW",
     score: "340/400",
     date: "July 2025",
@@ -48,4 +50,4 @@ export const CERTIFICATIONS_DATA: Certification[] = [
   }
 ];
 
-export const TECHNICAL_CERTIFICATIONS_DATA: TechnicalCertification[] = [];
+export const TECHNICAL_CERTIFICATIONS_DATA: Certification[] = [];

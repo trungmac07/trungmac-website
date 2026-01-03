@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import type { Education, Certification, TechnicalCertification } from '../types/types';
+import type { Education, Certification } from '../types/types';
 import { EDUCATION_DATA, CERTIFICATIONS_DATA, TECHNICAL_CERTIFICATIONS_DATA } from '../constants/educationData';
 
 export const useEducation = (): Education[] => {
@@ -10,7 +10,7 @@ export const useCertifications = (): Certification[] => {
   return useMemo(() => CERTIFICATIONS_DATA, []);
 };
 
-export const useTechnicalCertifications = (): TechnicalCertification[] => {
+export const useTechnicalCertifications = (): Certification[] => {
   return useMemo(() => TECHNICAL_CERTIFICATIONS_DATA, []);
 };
 

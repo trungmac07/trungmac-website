@@ -4,7 +4,7 @@ import { oceanTheme } from './constants/theme';
 
 import './App.css'
 import Sidebar from './components/Sidebar/Sidebar';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 import Home from './pages/Home/Home';
 import Skills from './pages/Skills/Skills';

@@ -1,4 +1,3 @@
-import React from 'react';
 import "./Skills.css"
 import type { SkillGridProps } from '../../types/types';
 import { useSkills } from '../../hooks/useSkills';

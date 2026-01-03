@@ -1,4 +1,4 @@
-import React from 'react';
+
 import './Experience.css'
 import { achievementItem } from '../Education/components/achievement-item';
 import type { ExperienceCardProps } from '../../types/types';

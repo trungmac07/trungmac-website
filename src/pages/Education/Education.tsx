@@ -1,4 +1,4 @@
-import React from 'react';
+
 import './Education.css'
 import { EducationCard } from './components/EducationCard';
 import { CertificationSection } from './components/CertificationSection';
@@ -18,24 +18,24 @@ const EducationPage = () => {
 
         <section className="education-section">
           <h2 className="section-heading">Education</h2>
-          <div className="education-timeline">
+          <div className="education-timeline" style={{marginBottom:"3rem"}}>
             {education.map((edu, index) => (
               <EducationCard key={index} edu={edu} index={index} />
             ))}
           </div>
+
+          <CertificationSection
+            title="English Certifications"
+            certifications={certifications}
+            gridClass="certifications-grid"
+          />
+
+          <CertificationSection
+            title="Technical Certifications"
+            certifications={technicalCertifications}
+            gridClass="tech-certifications-grid"
+          />
         </section>
-
-        <CertificationSection 
-          title="English Certifications"
-          certifications={certifications}
-          gridClass="certifications-grid"
-        />
-
-        <CertificationSection 
-          title="Technical Certifications"
-          certifications={technicalCertifications}
-          gridClass="tech-certifications-grid"
-        />
       </div>
     </div>
   );

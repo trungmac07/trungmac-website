@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Card, Typography, Tag, Row, Col, Space, Divider, Modal } from 'antd';
+import { useState } from 'react';
+import { Card, Tag, Row, Col, Space, Divider, Modal } from 'antd';
 import { ThunderboltOutlined, RocketOutlined } from '@ant-design/icons';
 import type { StatItem } from '../../types/types';
 import { useAboutSkills, useAboutStats, useResumeLink, useAboutContactItems } from '../../hooks/useAbout';
@@ -15,12 +15,14 @@ export default function About() {
   const resumeLink = useResumeLink();
   const contactItems = useAboutContactItems();
 
+  // Transform hook data into stat items with icons
   const stats: StatItem[] = statsData.map(stat => ({
     ...stat,
     icon: getIconComponent(stat.iconType),
-    details: null,
+    details: null, // Will be rendered in modal
   }));
 
+  // Transform hook data into skill items with icons
   const skills = skillsData.map(skill => ({
     ...skill,
     icon: getIconComponent(skill.iconType),
@@ -43,7 +45,7 @@ export default function About() {
         }} />
 
         <div style={{ padding: '60px 30px', textAlign: 'center' }}>
-
+          
           <h1 className='page-title'>
             Information
           </h1>
@@ -94,6 +96,8 @@ export default function About() {
           </div>
 
           <Divider className='divider' />
+
+          {/* Secondary Text */}
           <div className="animate-in" style={{
             maxWidth: '850px',
             margin: '0 auto 40px',
@@ -116,6 +120,7 @@ export default function About() {
           </div>
           )}
 
+          {/* Contact Information Section */}
           <Divider className='divider' />
           <div className="contact-section animate-in" style={{
             marginTop: '40px',
